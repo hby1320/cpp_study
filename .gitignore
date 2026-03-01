@@ -1,0 +1,12 @@
+.env
+
+tmp/
+data/
+Logs/
+*.log
+
+# jetbrain IDE CLion build folders
+cmake-build-debug
+cmake-build-release
+build/
+
