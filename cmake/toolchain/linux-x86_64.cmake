@@ -1,0 +1,17 @@
+# Toolchain for Ubuntu (x86_64, Linux)
+# Set compilers only if not already set to avoid CMake cache reconfigure loops
+if(NOT DEFINED CMAKE_C_COMPILER)
+  set(CMAKE_C_COMPILER "/usr/bin/gcc" CACHE FILEPATH "C compiler")
+endif()
+if(NOT DEFINED CMAKE_CXX_COMPILER)
+  set(CMAKE_CXX_COMPILER "/usr/bin/g++" CACHE FILEPATH "C++ compiler")
+endif()
+if(NOT DEFINED CMAKE_SYSTEM_NAME)
+  set(CMAKE_SYSTEM_NAME "Linux" CACHE STRING "System Name")
+endif()
+if(NOT DEFINED CMAKE_SYSTEM_PROCESSOR)
+  set(CMAKE_SYSTEM_PROCESSOR "x86_64" CACHE STRING "System Processor")
+endif()
+# Identification variables for conditional compilation / configuration
+set(PLATFORM_ID "linux-x86_64" CACHE STRING "Platform identifier")
+set(PLATFORM_DEFINE "PLATFORM_LINUX_X86_64" CACHE STRING "Preprocessor define for platform")

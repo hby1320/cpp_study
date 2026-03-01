@@ -1,0 +1,17 @@
+# Toolchain for JetsonThor (jetson thor, arm64)
+if(NOT DEFINED CMAKE_C_COMPILER)
+  set(CMAKE_C_COMPILER "/usr/bin/gcc" CACHE FILEPATH "C compiler")
+endif()
+if(NOT DEFINED CMAKE_CXX_COMPILER)
+  set(CMAKE_CXX_COMPILER "/usr/bin/g++" CACHE FILEPATH "C++ compiler")
+endif()
+if(NOT DEFINED CMAKE_SYSTEM_NAME)
+  set(CMAKE_SYSTEM_NAME "Linux" CACHE STRING "System Name")
+endif()
+if(NOT DEFINED CMAKE_SYSTEM_PROCESSOR)
+  set(CMAKE_SYSTEM_PROCESSOR "arm64" CACHE STRING "System Processor")
+endif()
+# Jetson-specific flags can be added here
+set(PLATFORM_ID "jetson-thor-arm64" CACHE STRING "Platform identifier")
+set(PLATFORM_DEFINE "PLATFORM_JETSON_THOR_ARM64" CACHE STRING "Preprocessor define for platform")
+
